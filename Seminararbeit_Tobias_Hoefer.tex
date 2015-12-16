@@ -4,6 +4,9 @@
 \usepackage[utf8]{inputenc} 
 \usepackage{lipsum}
 \usepackage[margin=1 in,left=1.5in,includefoot]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref} %Allows for clickable references
 
 %Header and Footer Stuff
 \usepackage{fancyhdr}
@@ -23,16 +26,23 @@
 	\vspace{.75 cm}
 	\huge{\bfseries Vektorräume und Hilberträume}\\
 	\vspace{.25 cm}
-	
 	\line(1,0){330} \\
 	\vspace{1.5 cm}
 	\textsc{\LARGE Hochschule M\"unchen}\\
+	%Figure
+	%\begin{figure}[H]
+	%	\centering
+%		\includegraphics[height=0 cm] {path}
+	%	\caption[Optional caption]{Real, local caption}
+	%	\label{fig:tobias}
+	%\end{figure}
 	\vspace{10 cm}
 	\end{center}
 	\begin{flushright}
 	\textsc{\large Tobias H\"ofer\\26.12.2016}
 	\end{flushright}
 \end{titlepage}
+
 \tableofcontents
 \thispagestyle{empty}
 \cleardoublepage
@@ -41,12 +51,15 @@
 \section{Einleitung}\label{sec:intro}
 \lipsum[1]
 \section{Vektorraum}\label{sec:vec}
-\subsection{Definition}\label{sec:vecdef}
+\subsection{Definition}\label{sec:vecdef} \cite{ref:one}
 \section{Hilbertraum}\label{sec:hil}
 \subsection{Definition}\label{sec:hildef}
 \section{Hilbertraum in der Quanteninformatik}\label{sec:def}
 \section{Zusammenfassung}\label{sec:intro}
 
-
+%References
+\cleardoublepage
+\bibliographystyle{plain}
+\bibliography{/Users/tobiashofer/Seminararbeit/references/firstref.bib}
 
 \end{document}
