@@ -1,0 +1,5 @@
+#ignore all files texmaker build needs
+build/**
+
+#ignore the baking files
+Seminararbeit_Stefan_Ronczka.tex.bak
