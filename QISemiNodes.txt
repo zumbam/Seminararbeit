@@ -1,0 +1,103 @@
+TODO erweitern in Latex
+
+Infos aus dem Quantum Computing Primer 
+http://www.dwavesys.com/tutorials/background-reading-series/quantum-computing-primer
+
+Einleitung Gedanke*******************
+
+Warum braucht man Quanten Computer?
+
+Beispiel nach D -Wave
+
+-Das Licht Schalter Spiel
+	-man geht zunächst davon aus man hat mehrere Schalter wobei jeder Schalter
+		- einen bias Wert hat beliebige Zahl
+		- on/off 1/-1 sein kann
+
+
+		ganz nach der Formel E(s) = sum(h_i * s_i   ; i)
+
+		h_i = Bias von Schalter i
+		s_i = Zustand Schalter i
+
+		
+	-die Frage lautet nun was ist die Kombination mit dem kleisten Wert
+
+		 => leicht zu sehen
+
+
+
+	Anschließend hinzufügen einer zusätzlichen Bedingung das Paar von Schaltern auch mit einem Bias J versehen werden
+
+	=> Formel E(s) = sum(h_i * s_i   , i) + sum(J_i,j  * s_i * s_j ;  i,j)
+		
+		h_i = Bias von Schalter i
+		s_i = Zustand Schalter i
+
+		s_j = = Zustand Schalter j
+		J_i,j = Bias des Paares Schalter i,j
+
+
+	=> sehr Schweres Problem 
+
+	Es müssen alle kombinationen durchlaufen werden Bei 2 Schalter also jeweils [ON ON], [ON OFF], [OFF ON] oder [OFF OFF].
+	für n Schalter für dies zu 2^n Kombinationen
+
+	Ausmaße sind für 10 Schalter = 2^10  = 1024
+
+
+	-Lösung des Problems mittels Hilfe der Quanten Mechanik
+
+	Darstellung der Schalter Zustände als Superposition der Zustände
+
+ 		== Austausch Bit durch Qbits
+
+	-Der D Wave Computer extrahiert die Stellung der Schalter für minimalen Wert der Summe
+		-nimmt die Superposition (noch ohne Bias)
+		-passt langsam den Quanten Computer an, um den Super Positions Effekt zu deaktiviern
+		-gleichzeitig werden langsam alle Bias J und h eingeschalten 
+		-Nach dem diese Operation beendet ist fallen die Schalter langsam aus dem Superpositions Zustand
+ 		und wählen dabei einen Klassischen Zustand
+		-Zuletzt muss jeder Schalter einen klassischen Zustand besitzten 
+
+		(Die Quanten mechanik innerhalb des Computers hilft dabei die Richtigen Zustände zu setzten (für den minimalen wert der Summe))
+		-gibt ein klassisches Bit mit der minimale Summe aus (was ebenso eine der 2^n möglichen Kombinationen war)
+
+	Man gewinnt also das Spiel was für den normalen Computer schwer wenn nicht ünmöglich war
+
+
+	TODO überleitung : Programmierung des D wave
+		-die unentschlossenen Qbits werden einem Energie Programm unterzogen 
+			-nachdem sie sich für den klassischen Zustand entscheiden
+			-welches genau der setzung der h und J bias entspricht
+				-diese definieren das Problem
+
+			-problem der übersetzung des echt Welt Problem auf eine Reihe von h's und J's (wäre genau wie maschinen Code eingeben)
+				-Lösung durch Quantum Compiler
+
+			Programming with D-Wave white paper
+			http://www.dwavesys.com/sites/default/files/Map%20Coloring%20WP2.pdf
+
+
+
+	Weitere Besonderheiten an Quanten Computer
+
+		-Lernfähigkeit (künstliche Intellegenz)
+
+
+
+
+physischer Aufbau des Quanten Computers
+
+
+	
+
+
+
+
+
+
+
+
+
+
