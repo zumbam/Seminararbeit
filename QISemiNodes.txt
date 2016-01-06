@@ -78,16 +78,125 @@ Beispiel nach D -Wave
 			Programming with D-Wave white paper
 			http://www.dwavesys.com/sites/default/files/Map%20Coloring%20WP2.pdf
 
-
+****************************************
 
 	Weitere Besonderheiten an Quanten Computer
 
 		-Lernfähigkeit (künstliche Intellegenz)
+		-schreibt Energie Programm selbst(Beispiel mit Bild zuordnung)
+
+****************************************
 
 
 
 
-physischer Aufbau des Quanten Computers
+physischer Aufbau des Quanten Computers Quantum Hardware
+
+Introducion to the D Wave
+
+	-die im vorangegangen Beispiel beschriebene Zustände ein Quantums können entweder 0 oder 1 sein
+	(Während der Superposition in beiden gleichzeitig)
+
+		-Aus was bestehen die einzelnen QBit Blöcke?
+
+*************************************************
+
+			-die Idee der Umsetztung kommt aus der Digital Technik
+
+				-Hier werden die Art und Weise wie man Informationen kodiert und daraufzugreift 
+				durch anpassen and überwachen von Spannungen in der Schaltung geregelt
+				
+				die Schaltungen bestehen aus klassische CMOS Transitoren 
+				
+					=> so wird die Idee die elektrische Spannung zur kodierung der Informationen von Physikalischen Geräten
+					 zu verwenden auch im D Wave genutzt
+*************************************************
+
+				
+
+
+			Der unterschied zum gewöhlichen Transistor ist nur die kodierung durch kleine Magnetfelder erfolgt
+			welche nach unten oder oben gerichtet sind, welches den Zuständen 1 und 0 entspricht.
+			
+			Mit Hilfe der Quanten Mechanik,die anwendbar ist kann man das SQUID in eine superposition bringen 
+				??? welche ???
+			Dies läst sich mit hilfe durch anbringen eines Schalter um dies zu automatisieren
+
+		
+
+			Zitat Wikipeadia: https://de.wikipedia.org/wiki/Supraleiter
+				Zeile 1
+
+				Definition:
+					Supraleiter sind Materialien, deren elektrischer Widerstand beim 
+					Unterschreiten der sogenannten Sprungtemperatur (abrupt) auf null fällt
+				
+				=> Quanten Mechanische Effekte
+
+
+				Wie stark Quanten Effekte wie Elektronen Wellen
+				-in dieser Struktur verstärkt werden 
+				-sich wie Qbits verhalten
+				hängt dabei vom Matrial ab
+
+
+
+			-der SQUID Quanten Transistor
+				-SQUID kommt von "Superconducting Quantum Interference Device"
+				
+
+				Das SQUID besteht aus einem Ring aus niobium, einem Supraleiter 
+				der in der Mitte zwei Isolierte Stellen hat.
+				Diese Stellen werden Josephson - Kontakt genannt.
+				Das eigentliche Ziel ist es jetzt Magnetfeldänderung zu messen.			
+
+				https://de.wikipedia.org/wiki/Josephson-Effekt
+
+				Um zu verstehen was genau passiert muss man wissen was der Josephson - Effekt ist.
+				Er beschreibt den Tunnel Strom zwischen zwei Supraleitern.
+
+				Das besondere bei Supraleiter lauf der Supraleiter Teorien ist das Elektrische Strom nicht von einzelnen Elektronen
+ 				getragen, sondern von Elektronenpaaren. Wenn die oben genannte Isolierung nicht mehr als ein paar nano meter groß ist,
+				So ist es möglich das diese Paar über die Barriere tunneln was man Jonephson Effekt nennt. 
+				Diese Kombination "Supraleiter-Isolator-Supraleiter" nennt man Josephson - Kontakt. Wenn man nun geringen Strom durch 
+				leitet, verhält es sich weiterhin als Supraleiter, da eben die Paare durch die Ioslierte Stelle tunneln.
+
+				Der Grund wozu dieser Effekt benötigt wird ist, dass es ohne 
+				
+				
+
+				
+				
+				
+			
+
+
+			-Soviel zum Aufbau des Transistor Bausteins
+			
+			Um nun mit mehreren Qubits rechnen zukönnen müssen die einzelnen SQUID's verknüpt werden, was
+			durch eine sogennante Kopplung erfolgt. Dazu werden supraleitende Ringe 
+			zwischen die SQUID angebracht. Das sind die in der untern Abbildung blau dargestellten Kreise. 		
+			Während die SQUID's, im gegensatz zu oberen Abbildung, als langgezogene Rechtecke dargestellt sind.
+
+			Um nun mit der Schaltung zu operienen, umgibt jedes Qubit und Kopplung weitere Schaltkreise.
+			Ohne jetzt auf die einzelnen Schaltungselemente einzugehen, wird der Schaltung um die Funktionen zur Messung des Qubits,
+			Steuerung der Magnetischen Information und die Speicherung des letzten Wertes. Wobei immer erst gemessen wird, nachdem der vorgang der Berechnung
+			vorbei ist und die Qubit auf einen klassischen Wert 0/1 gesetzt sind.
+
+
+
+
+			
+			
+
+
+		
+
+			
+
+
+				
+
 
 
 	
