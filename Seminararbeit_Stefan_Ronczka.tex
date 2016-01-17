@@ -2,11 +2,19 @@
 \documentclass{article}
 
 \usepackage[utf8]{inputenc} 
+\usepackage{lmodern}
 \usepackage{lipsum}
 \usepackage[margin=1 in,left=1.5in,includefoot]{geometry}
 \usepackage{graphicx}
 \usepackage{float}
-\usepackage[hidelinks]{hyperref} %Allows for clickable references
+\usepackage[hidelinks]{hyperref}
+\usepackage{braket}
+
+\usepackage{amsmath}
+
+
+
+ %Allows for clickable references
 
 %Header and Footer Stuff
 \usepackage{fancyhdr}
@@ -156,18 +164,39 @@ laut den D-Wave Wissenschaftlern schwierig(wenn nicht unmöglich) für System de
 normalen Bits durch sogenannte Qubits ausgetauscht. Der D-Wave Computer nimmt sich diese Superpostion noch ohne Bias. Man passt nun der 
 Quanten Computer langsam an, um den Superposition Effekt zu deaktivieren. Gleichzeitig werden die Bias J und h langsam aktiviert. Nun wirkt die Quantenmechanik auf die Schalter und hilft ihnen den Zustand für die minimale Summe zu finden. Nachdem dies geschehen ist, befinden sich die Schalter in einem Klassischen Zustand. So wie die Schalter nun stehen, ist die Kombination für das globale Minimum.
 
-\section{Quantum annealing}\label{sec:baseAlgo}
+\section{Die Alogrithmen}\label{sec:baseAlgo}
 Damit ist natürlich noch nicht beantwortet was hinter dem Vorgehen des D-Wave Computers steckt.
 Um dies näher zu bringen, wird nun in diesem Teil 
 die Optimierungs Strategie des D-Wave gezeigt.
 Der D-Wave konzipiert auf den fundamentalen Prinzipien der Natur. Dort gilt für alle physikalischen Systeme, dass sie dazu neigen ihre freie Energie zu minimieren. Genau diese Eigenschaft wird in klassischen 
-Systemen meist mit "thermal Annealing" verbunden.
+Systemen meist mit "Annealing" verbunden.
 Annealing bedeutet soviel wie abkühlen, genauer ist mit "thermal Annealing" ein Vorgang gemeint, der aus der Werkstoffkunde kommt. Hier wird das Metall ,nachdem  erhitzen, langsam abgekühlt. Dies Sorgt dafür, dass die Atome die Zeit haben sich zu ordnen und Kristalle zu bilden.%def wiki themal annealing 
 Hierbei wird das Metall von Unreinheiten (den großen Energie) befreit.
-Es wird also wie oben bereits gesagt diese Energie minimiert.
+Es wird also wie oben bereits gesagt diese Energie minimiert. Dies geschieht, aber eben nur wenn man dem System genügend Zeit lässt. Es gibt nun mehrerer Annealing Algorithmen, wobei sich auf die von D-Wave genutzten "adiabatic quantum Computation" beschränkt wird, da es von hier aus leichter ist die Verbindung zum D-wave klar zumachen. Das erste was einem dabei auffällt ist der Begriff "adiabatic" oder zu Deutsch adiabatisch. Um diesen Begriff zu erklären werden allerdings noch ein paar Quantenmechanische Formeln benötigt. Zunächst die Schrödinger Gleichung,welche die Dynamik eines Quantenmechanischen Zustandes beschreibt.
+\begin{equation}
+i\hbar\frac{ \partial}{ \partial t} \ket{\psi (t)} = \hat{H} \ket{\psi (t)}
+\end{equation}
+\newline
+$\hat{H}$ ist hierbei der Hamiltonoperator, er steht für die gesamte Energie des Systems.
+$\hbar$ ist das Plancksche Wirkungsquantum und
+$\frac{ \partial}{ \partial t}$ die Ableitung nach der Zeit
+Dabei ist $\ket{\psi (t)}$ ist der Zustandsvektor in einem Hilbertraum.
 
-Auch in Quanten Systemen besteht der Zwang zum Minimalisieren der freien Energie , wobei sich gezeigt hat, dass der Vorgang hier noch 
+
+Durch einsetzten 
+
+
+
+
+Man kann sich dies auch so vorstellen ,dass man eine Landschaft aus dem Energiepotenzial der 
+
+Auch in Quanten Systemen ist dies so, wobei sich gezeigt hat, dass der Vorgang hier noch 
 im Gegensatz zu obigen Beispiel beschleunigt wird.
+
+
+
+Der D-Wave ist so entworfen worden das man das man eigentlich jeden Quantum Anne
+
 
 Quantum Annealing ist eine Methode zur Bestimmung des lokalen Optimums bei vielen Unabhängigen in einem Funktion. Genauer handelt es sich um eine Metaheuristik, die also theoretisch auf auf beliebig viele Problemstellungen angewandt werden kann, wenn sie für das Problem implementiert wird.
 
